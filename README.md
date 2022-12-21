@@ -1,3 +1,88 @@
+# Resale Furniture
+
+#### Live link
+
+`Live website` [Click here]()
+<!-- `client-side` [Click here]() -->
+<!-- `server-side` [Click here]() -->
+
+#### Code link 
+
+<!-- `GitHub` [Click here]() -->
+`client-side` [Click here]()
+`server-side` [Click here]()
+
+### Description
+- In this project implement for Resale Furniture. 
+- Customer/user can't take a service without login and login form also validation implemented, such as  full 
+name is required, password must be 6 characters, need a uppercase (CAPITAL) and a special character (!@#$&*).
+- Implement user email verification enable
+
+- This project frontend start with Create-react-app (ReactJS)
+- Design by Tailwindcss with daisyUI Component 
+- Backend start with NodeJS and ExpressJS
+- Connect server with MongoDB Database
+- Implement CRUD operation
+- Every section completed after code push on GitHub
+
+--- 
+
+### Features 
+- Custom Design 
+- SEO Friendly 
+- Mobile and PC, Tablet Responsive 
+- Doctors Management 
+- Customers Management 
+- Add to Cart / Book Appointment 
+- Payment Gateway 
+- Email services 
+<!-- - Shipping Management  -->
+<!-- - Invoice Printing  -->
+
+#### Front-end Technology
+
+- Firebase for authentication and deploy (hosting)
+- Tailwind CSS
+- daisyUI
+- JavaScript
+- ReactJS
+- React Router - (npm install react-router-dom)
+- React-Context (AuthProvider)
+- React Hook Form (npm install react-hook-form)
+- React-Toastify (npm i react-toastify)
+- React Icons (npm install react-icons --save) [Docs](https://react-icons.github.io/react-icons/)
+
+- React Day Picker (npm install react-day-picker date-fns)
+- TypewriterJS (npm i typewriter-effect)
+- StripeJS (npm install --save @stripe/react-stripe-js @stripe/stripe-js)
+- EmailJS (npm install @emailjs/browser --save) 
+- React-phone-number-input (npm i react-phone-number-input) [Docs](https://www.npmjs.com/package/react-phone-number-input)
+
+#### Back-end Technology
+
+- Node.JS
+- Nodemon (npm install -g nodemon)
+  for server live when coding [Docs1](https://nodemon.io/) and [Docs2](https://www.npmjs.com/package/nodemon)
+
+- MongoDB (Atlas, Cluster) for database [Docs](https://cloud.mongodb.com/)
+
+- React Query/ TanStack Query (npm i @tanstack/react-query)
+
+- JWT (JSON Web Token) for authorization (npm i jsonwebtoken) [Docs](https://www.npmjs.com/package/jsonwebtoken)
+
+- Stripe for payment get way (npm install --save stripe) [Docs1](https://stripe.com/docs/payments/quickstart) [Docs2](https://stripe.com/docs/testing)
+
+- Nodemailer (npm install nodemailer) [Docs](https://nodemailer.com/about/)
+- Mail gun () [Docs](https://app.mailgun.com/mg/dashboard) (https://www.npmjs.com/package/nodemailer-mailgun-transport) (npm i nodemailer-mailgun-transport)
+
+- Deploy in Vercel (server) [Docs](https://vercel.com/dashboard)
+
+
+
+---
+
+
+<!-- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +153,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+ -->
