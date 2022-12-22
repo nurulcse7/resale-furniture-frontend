@@ -2,15 +2,15 @@
 
 #### Live link
 
-`Live website` [Click here]()
-<!-- `client-side` [Click here]() -->
+`Live website` [Click here](https://resale-furniture-bd-com.web.app/)
+<!-- `client-side` [Click here](https://resale-furniture-bd-com.web.app/) -->
 <!-- `server-side` [Click here]() -->
 
 #### Code link 
 
-<!-- `GitHub` [Click here]() -->
-`client-side` [Click here]()
-`server-side` [Click here]()
+<!-- `GitHub` [Click here](https://github.com/nurulcse7/resale-furniture-frontend) -->
+`client-side` [Click here](https://github.com/nurulcse7/resale-furniture-frontend)
+`server-side` [Click here](https://github.com/nurulcse7/resale-furniture-server)
 
 ### Description
 - In this project implement for Resale Furniture. 
@@ -42,21 +42,23 @@ name is required, password must be 6 characters, need a uppercase (CAPITAL) and 
 #### Front-end Technology
 
 - Firebase for authentication and deploy (hosting)
-- Tailwind CSS
-- daisyUI
-- JavaScript
-- ReactJS
-- React Router - (npm install react-router-dom)
+- Tailwind CSS [Docs](https://tailwindcss.com/docs/guides/create-react-app)
+- daisyUI (npm i daisyui) [Docs](https://daisyui.com/docs/install/)
+- JavaScript [Docs]()
+- ReactJS (npx create-react-app)
+- React Router - (npm install react-router-dom) [Docs](https://reactrouter.com/en/main)
 - React-Context (AuthProvider)
-- React Hook Form (npm install react-hook-form)
-- React-Toastify (npm i react-toastify)
+- React Hook Form (npm install react-hook-form) [Docs](https://react-hook-form.com/)
+- React-Hot-Toast (npm install react-hot-toast) [Docs](https://react-hot-toast.com/docs)
 - React Icons (npm install react-icons --save) [Docs](https://react-icons.github.io/react-icons/)
-
-- React Day Picker (npm install react-day-picker date-fns)
-- TypewriterJS (npm i typewriter-effect)
+- React-Photo-View (npm i react-photo-view) [Docs](https://www.npmjs.com/package/react-photo-view)
+- React Query/ TanStack Query (npm i @tanstack/react-query) [Docs](https://tanstack.com/query/v4/docs/react/installation)
+- Axios (npm install axios) [Docs](https://axios-http.com/docs/intro)
+- AOS (npm install --save aos@next) [Docs](https://michalsnik.github.io/aos/)
+- sweetalert2-react-content (npm install --save sweetalert2 sweetalert2-react-content) [Docs](https://sweetalert2.github.io/recipe-gallery/)
+<!-- - TypewriterJS (npm i typewriter-effect) [Docs]() -->
 - StripeJS (npm install --save @stripe/react-stripe-js @stripe/stripe-js)
 - EmailJS (npm install @emailjs/browser --save) 
-- React-phone-number-input (npm i react-phone-number-input) [Docs](https://www.npmjs.com/package/react-phone-number-input)
 
 #### Back-end Technology
 
@@ -66,7 +68,7 @@ name is required, password must be 6 characters, need a uppercase (CAPITAL) and 
 
 - MongoDB (Atlas, Cluster) for database [Docs](https://cloud.mongodb.com/)
 
-- React Query/ TanStack Query (npm i @tanstack/react-query)
+<!-- - React Query/ TanStack Query (npm i @tanstack/react-query) [Docs](https://tanstack.com/query/v4/docs/react/installation) -->
 
 - JWT (JSON Web Token) for authorization (npm i jsonwebtoken) [Docs](https://www.npmjs.com/package/jsonwebtoken)
 
