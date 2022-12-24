@@ -4,18 +4,18 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 const SingleFurniture = () => {
   const {
-    capacity,
-    categoryId,
-    color,
-    location,
+    // capacity,
+    // categoryId,
+    // color,
+    // location,
     name,
-    originalPrice,
+    // originalPrice,
     picture,
-    reSalePrice,
-    role,
-    sellerName,
-    years_of_use,
-    _id,
+    // reSalePrice,
+    // role,
+    // sellerName,
+    // years_of_use,
+    // _id
   } = useLoaderData();
 
   return (
