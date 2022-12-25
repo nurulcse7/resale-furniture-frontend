@@ -22,7 +22,7 @@ const Furnitures = () => {
   const handleCategory = (category) => {
     setCategory(category);
   };
-  console.log(reported);
+//   console.log(reported);
   return (
     <section className='py-8 '>
       <div className=' border-b flex justify-between pr-2 pb-3 border-gray-200  mb-3 '>
@@ -45,8 +45,9 @@ const Furnitures = () => {
           className='px-3'
           name=''
           id=''
+          
         >
-          <option disabled selected>
+          <option disabled>
             Select Category
           </option>{' '}
           {categories?.map((cate) => (

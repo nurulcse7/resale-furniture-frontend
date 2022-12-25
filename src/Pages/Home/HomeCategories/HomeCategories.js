@@ -1,8 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../Hooks/useTitle';
 import CategoryCard from './CategoryCard';
 
 const HomeCategories = () => {
+  useTitle('Categories');
+
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     axios
@@ -21,7 +24,10 @@ const HomeCategories = () => {
       </h1>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5'>
         {categories.map((category) => (
-          <CategoryCard key={category._id} category={category} />
+          <CategoryCard 
+          key={category._id} 
+          category={category} 
+          />
         ))}
       </div>
     </div>

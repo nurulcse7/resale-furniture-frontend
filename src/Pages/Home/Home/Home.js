@@ -1,4 +1,4 @@
-import React from "react";
+import React, { } from "react";
 import useTitle from "../../../Hooks/useTitle";
 import Advertise from "../Advertise/Advertise";
 import Banner from "../Banner/Banner";
@@ -15,6 +15,7 @@ const Home = () => {
 			<HomeCategories />
 			<Gallery />
 			<ContactUs />
+
 		</div>
 	);
 };

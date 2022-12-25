@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ category }) => {
-  const { picture, _id, categoryName, categoryId } = category;
+  const { picture, name, categoryName } = category;
   return (
     <div className=' rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100'>
-      <Link to={`/furnitures/${categoryId}`}>
+      <Link to={`/furnitures/${categoryName}`}>
         {' '}
         <img
           src={picture}
@@ -15,9 +15,11 @@ const CategoryCard = ({ category }) => {
       </Link>
       <div className='flex flex-col justify-between p-6 space-y-8'>
         <div className='space-y-2'>
-          <Link to={`/furnitures/${categoryId}`}>
-            <h2 className='text-3xl text-center uppercase font-semibold tracking-wide'>
-              {categoryName}
+          <Link to={`/furnitures/${categoryName}`}>
+            <h2 className='text-3xl text-center capitalize font-bold tracking-wide'
+            
+            >
+              {name}
             </h2>
           </Link>
         </div>

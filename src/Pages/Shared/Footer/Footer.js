@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
-import logo from '../../../Pages/assets/logo.jpg';
+import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import logo from '../../../Pages/assets/logo.png';
 const Footer = () => {
   return (
     <div className=''>
@@ -25,24 +25,16 @@ const Footer = () => {
               <h3 className='tracking-wide uppercase'>Product</h3>
               <ul className='space-y-1'>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Features
-                  </Link>
+                  <Link rel='noopener noreferrer'>Features</Link>
                 </li>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Integrations
-                  </Link>
+                  <Link rel='noopener noreferrer'>Integrations</Link>
                 </li>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Pricing
-                  </Link>
+                  <Link rel='noopener noreferrer'>Pricing</Link>
                 </li>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    FAQ
-                  </Link>
+                  <Link rel='noopener noreferrer'>FAQ</Link>
                 </li>
               </ul>
             </div>
@@ -50,14 +42,10 @@ const Footer = () => {
               <h3 className='tracking-wide uppercase'>Company</h3>
               <ul className='space-y-1'>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Privacy
-                  </Link>
+                  <Link rel='noopener noreferrer'>Privacy</Link>
                 </li>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Terms of Service
-                  </Link>
+                  <Link rel='noopener noreferrer'>Terms of Service</Link>
                 </li>
               </ul>
             </div>
@@ -65,50 +53,52 @@ const Footer = () => {
               <h3 className='uppercase'>Developers</h3>
               <ul className='space-y-1'>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Public API
-                  </Link>
+                  <Link rel='noopener noreferrer'>Public API</Link>
                 </li>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Documentation
-                  </Link>
+                  <Link rel='noopener noreferrer'>Documentation</Link>
                 </li>
                 <li>
-                  <Link rel='noopener noreferrer' href='#'>
-                    Guides
-                  </Link>
+                  <Link rel='noopener noreferrer'>Guides</Link>
                 </li>
               </ul>
             </div>
             <div className='space-y-3'>
               <div className='uppercase'>Social media</div>
               <div className='flex justify-start space-x-3'>
-                <Link
+                <a
+				href='https://www.linkedin.com/in/nurulbd75/'
                   rel='noopener noreferrer'
-                  href='#'
                   title='Facebook'
                   className='text-xl'
                 >
-                  <FaFacebook />
-                </Link>
-                <Link
+                  <FaLinkedin />
+                </a>
+                <a
+				href='https://twitter.com/nurulbd75'
                   rel='noopener noreferrer'
-                  href='#'
                   title='Twitter'
                   className='text-xl'
                 >
                   <FaTwitter />
-                </Link>
-                <Link
+                </a>
+				<a
+				href='https://www.facebook.com/nurul.bd.775'
+                  rel='noopener noreferrer'
+                  title='Facebook'
+                  className='text-xl'
+                >
+                  <FaFacebook />
+                </a>
+                <a
+				href='https://www.instagram.com/nurulbd75/'
                   target={'_blank'}
                   rel='noopener noreferrer'
-                  href='#'
                   title='Instagram'
                   className=' text-xl'
                 >
                   <FaInstagram />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -117,10 +107,10 @@ const Footer = () => {
           © 2022 All rights reserved at{' '}
           <span
             title='if you want to know more info please visit here 👉🏿  https://web.programming-hero.com'
-            className='text-red-500 font-bold italic'
+            className='text-secondary font-bold italic'
           >
             <Link target={'_blank'} href='https://web.programming-hero.com'>
-              Resale Furniture Ltd
+              Resale Furniture Ltd{' '}
             </Link>
           </span>{' '}
         </div>

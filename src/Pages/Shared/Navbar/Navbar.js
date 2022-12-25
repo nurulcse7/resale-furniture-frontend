@@ -1,16 +1,16 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaTimes, FaUserCircle } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
-import logo from '../../../Pages/assets/logo.jpg';
-import person from '../../../Pages/assets/icons/person.svg';
+import logo from '../../../Pages/assets/logo.png';
+
 const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const profileRef = useRef();
   useEffect(() => {
     let handler = (e) => {
-      if (!profileRef.current.contains(e.target)) {
+      if (!profileRef?.current?.contains(e.target)) {
         setIsMenuOpen(false);
       } else {
       }
@@ -21,19 +21,18 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div>
+    <div className='sticky top-0 z-50 bg-base-200'>
       <div>
-        <div className='px-4 py-5 mx-auto  md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+        <div className='px-4 py-5 mx-auto  md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 '>
           <div className='relative flex items-center gap-3 justify-between'>
             {user?.email && (
               <label
                 tabIndex={0}
                 htmlFor='dashboard-drawer'
                 className=' lg:hidden'
-              >
-                <FaBars className='text-xl mb-1' />
-              </label>
+              ></label>
             )}
+
             <div className='lg:w-0 w-full'>
               <Link
                 to='/'
@@ -57,14 +56,42 @@ const Navbar = () => {
                     title='Home'
                     className={({ isActive }) =>
                       isActive
-                        ? 'font-medium tracking-wide text-red-400  transition-colors duration-200 hover:text-teal-accent-400'
+                        ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
                         : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
                     }
                   >
                     Home
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    to='/categories'
+                    aria-label='Categories'
+                    title='Categories'
+                    className={({ isActive }) =>
+                      isActive
+                        ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
+                        : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
+                    }
+                  >
+                    Categories
+                  </NavLink>
+                </li>
 
+                <li>
+                  <NavLink
+                    to='/contact'
+                    aria-label='Contact'
+                    title='Contact'
+                    className={({ isActive }) =>
+                      isActive
+                        ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
+                        : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
+                    }
+                  >
+                    Contact
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink
                     to='/blog'
@@ -72,7 +99,7 @@ const Navbar = () => {
                     title='Blog'
                     className={({ isActive }) =>
                       isActive
-                        ? 'font-medium tracking-wide text-red-400  transition-colors duration-200 hover:text-teal-accent-400'
+                        ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
                         : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
                     }
                   >
@@ -86,7 +113,7 @@ const Navbar = () => {
                     title='Dashboard'
                     className={({ isActive }) =>
                       isActive
-                        ? 'font-medium tracking-wide text-red-400  transition-colors duration-200 hover:text-teal-accent-400'
+                        ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
                         : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
                     }
                   >
@@ -97,7 +124,7 @@ const Navbar = () => {
               <button
                 aria-label='Open Menu'
                 title='Open Menu'
-                className=' -mr-1 w-12 border-2 overflow-hidden border-red-500 h-12 transition duration-200 rounded-full focus:outline-none focus:shadow-outline'
+                className=' -mr-1 w-12 overflow-hidden transition duration-200 rounded-full focus:outline-none focus:shadow-outline'
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {user?.email ? (
@@ -109,11 +136,7 @@ const Navbar = () => {
                   />
                 ) : (
                   <>
-                    <img
-                      className=' cursor-pointer  rounded-full w-12 h-12'
-                      src={person}
-                      alt=''
-                    />
+                    <FaUserCircle />
                   </>
                 )}
               </button>
@@ -155,7 +178,7 @@ const Navbar = () => {
                           <NavLink
                             className={({ isActive }) =>
                               isActive
-                                ? 'font-medium tracking-wide text-red-500   transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                ? 'font-medium tracking-wide text-secondary   transition-colors duration-200 hover:text-deep-purple-accent-400'
                                 : 'font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400'
                             }
                             to='/'
@@ -168,12 +191,42 @@ const Navbar = () => {
 
                         <li>
                           <NavLink
+                            to='/categories'
+                            aria-label='Categories'
+                            title='Categories'
+                            className={({ isActive }) =>
+                              isActive
+                                ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
+                                : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
+                            }
+                          >
+                            Categories
+                          </NavLink>
+                        </li>
+
+                        <li>
+                          <NavLink
+                            to='/contact'
+                            aria-label='Contact'
+                            title='Contact'
+                            className={({ isActive }) =>
+                              isActive
+                                ? 'font-medium tracking-wide text-secondary  transition-colors duration-200 hover:text-teal-accent-400'
+                                : 'font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400'
+                            }
+                          >
+                            Contact
+                          </NavLink>
+                        </li>
+
+                        <li>
+                          <NavLink
                             to='/blog'
                             aria-label='Blog'
                             title='Blog'
                             className={({ isActive }) =>
                               isActive
-                                ? 'font-medium tracking-wide text-red-500 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                ? 'font-medium tracking-wide text-secondary transition-colors duration-200 hover:text-deep-purple-accent-400'
                                 : 'font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400'
                             }
                           >
@@ -188,7 +241,7 @@ const Navbar = () => {
                             title='Dashboard'
                             className={({ isActive }) =>
                               isActive
-                                ? 'font-medium tracking-wide text-red-500 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                ? 'font-medium tracking-wide text-secondary transition-colors duration-200 hover:text-deep-purple-accent-400'
                                 : 'font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400'
                             }
                           >

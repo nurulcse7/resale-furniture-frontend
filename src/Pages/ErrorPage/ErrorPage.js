@@ -21,7 +21,7 @@ const ErrorPage = () => {
           <h1 className='font-bold text-blue-600 text-9xl'>{errors?.status}</h1>
 
           <h6 className='mb-2 text-2xl font-bold text-center text-gray-800 md:text-3xl'>
-            <span className='text-red-500'>Oops!</span> Page{' '}
+            <span className='text-secondary'>Oops!</span> Page{' '}
             {errors?.statusText}
           </h6>
 

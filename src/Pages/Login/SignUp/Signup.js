@@ -72,7 +72,8 @@ const SignUp = () => {
   // create user
 
   const createUser = (data) => {
-    setLoading(true);
+    console.log(data);
+    // setLoading(true);
     const formData = new FormData();
     formData.append('image', data.image[0]);
     fetch(
@@ -135,7 +136,7 @@ const SignUp = () => {
               </p>
             )}
             <div className='p-6 pt-2 '>
-              <h1 className='text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl'>
+              <h1 className='text-3xl text-center font-bold leading-tight tracking-tight text-secondary md:text-2xl'>
                 Sign Up
               </h1>
 
@@ -146,7 +147,7 @@ const SignUp = () => {
                 <div>
                   <label
                     htmlFor='name'
-                    className='block mb-2 text-sm font-medium text-gray-900'
+                    className='block mb-2 font-medium'
                   >
                     Your name
                   </label>
@@ -159,7 +160,7 @@ const SignUp = () => {
                     {...register('name', { required: 'Name is required' })}
                   />
                   {errors.name && (
-                    <p className='text-red-500 font-semibold flex items-center gap-1 mt-1'>
+                    <p className='text-secondary font-semibold flex items-center gap-1 mt-1'>
                       <FaTimes /> {errors.name?.message}
                     </p>
                   )}
@@ -167,7 +168,7 @@ const SignUp = () => {
                 <div>
                   <label
                     htmlFor=''
-                    className='block mb-2 text-sm font-medium text-gray-900'
+                    className='block mb-2 font-medium '
                   >
                     Chose your role
                   </label>
@@ -177,7 +178,7 @@ const SignUp = () => {
                     placeholder='Your name'
                     {...register('role')}
                   >
-                    <option value='buyer' selected>
+                    <option value='buyer' defaultValue>
                       Buyer
                     </option>
                     <option value='seller'>Seller</option>
@@ -187,7 +188,7 @@ const SignUp = () => {
                 <div>
                   <label
                     htmlFor='email'
-                    className='block mb-2 text-sm font-medium text-gray-900'
+                    className='block mb-2 font-medium'
                   >
                     Your email
                   </label>
@@ -200,7 +201,7 @@ const SignUp = () => {
                     {...register('email', { required: 'Email is required' })}
                   />
                   {errors.email && (
-                    <p className='text-red-500 font-semibold flex items-center gap-1 mt-1'>
+                    <p className='text-secondary font-semibold flex items-center gap-1 mt-1'>
                       <FaTimes /> {errors.email?.message}
                     </p>
                   )}
@@ -209,7 +210,7 @@ const SignUp = () => {
                 <div>
                   <label
                     htmlFor='password'
-                    className='block mb-2 text-sm font-medium text-gray-900'
+                    className='block mb-2 font-medium'
                   >
                     Password
                   </label>
@@ -253,7 +254,7 @@ const SignUp = () => {
                     </div>
                   </div>
                   {errors.password && (
-                    <p className='text-red-500 font-semibold flex items-center gap-1 mt-1'>
+                    <p className='text-secondary font-semibold flex items-center gap-1 mt-1'>
                       {errors.password.message && <FaTimes className='mt-1' />}{' '}
                       {errors.password?.message}
                     </p>
@@ -263,11 +264,12 @@ const SignUp = () => {
                   <div className='bg-gray-50 border border-gray-300 text-gray-900 flex-col  flex items-center font-bold  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600   w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500'>
                     {
                       <>
-                        <RiImageAddFill className='w-7 h-7' />
+                         
                         <label htmlFor='photo'>
-                          <h1 className='underline cursor-pointer'>
+                          <h1 className='hover:underline cursor-pointer'>
                             Upload Image{' '}
                           </h1>
+						  <RiImageAddFill className='ml-5 w-7 h-7 cursor-pointer' />
                         </label>
                       </>
                     }
@@ -282,7 +284,7 @@ const SignUp = () => {
                     />
                   </div>
                   {errors.image && (
-                    <p className='text-red-500 font-semibold flex flex-col items-center gap-1 mt-1'>
+                    <p className='text-secondary font-semibold flex flex-col items-center gap-1 mt-1'>
                       <FaTimes /> {errors.image?.message}
                     </p>
                   )}
@@ -303,11 +305,11 @@ const SignUp = () => {
                   <div className='ml-3 text-sm'>
                     <label
                       htmlFor='terms'
-                      className='font-light text-gray-500-300'
+                      className='font-light'
                     >
-                      I Accept the{' '}
+                      I Accept the
                       <Link
-                        className='font-medium text-primary-600 hover:underline-500'
+                        className='font-medium text-primary-600 hover:underline-500 ml-1'
                         to='/terms'
                       >
                         Terms and Conditions
@@ -328,13 +330,13 @@ const SignUp = () => {
                   Sign Up
                 </button>
 
-                <p className='text-sm font-light text-gray-500-400'>
+                <p className='font-light '>
                   Already have an account?{' '}
                   <Link
                     to='/signin'
-                    className='font-medium   hover:underline  '
+                    className='font-medium text-secondary hover:underline  '
                   >
-                    Login here
+                    Login Now
                   </Link>
                 </p>
               </form>

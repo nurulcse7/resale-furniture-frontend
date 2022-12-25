@@ -59,7 +59,7 @@ const Advertise = ({ setSelectOrder }) => {
                     <div className='flex px-2 justify-between'>
                       <p className=''>
                         OriginalPrice:{' '}
-                        <del className='text-red-500 font-semibold '>
+                        <del className='text-secondary font-semibold '>
                           ${originalPrice}
                         </del>
                       </p>
@@ -72,7 +72,7 @@ const Advertise = ({ setSelectOrder }) => {
                       <p className=''>Name: {name}</p>
                       <p>
                         Uses of:{' '}
-                        <span className='text-red-500 font-bold'>
+                        <span className='text-secondary font-bold'>
                           {' '}
                           {years_of_use}
                         </span>

@@ -40,7 +40,7 @@ const FurnitureCard = ({ furniture, setSelectOrder, setReported }) => {
           <div className='flex px-2 justify-between'>
             <p className=''>
               OriginalPrice:{' '}
-              <del className='text-red-500 font-semibold '>
+              <del className='text-secondary font-semibold '>
                 ${originalPrice}
               </del>
             </p>
@@ -52,7 +52,7 @@ const FurnitureCard = ({ furniture, setSelectOrder, setReported }) => {
             <p className=''>Name: {name}</p>
             <p>
               Uses of:{' '}
-              <span className='text-red-500 font-bold'> {years_of_use}</span>
+              <span className='text-secondary font-bold'> {years_of_use}</span>
               {years_of_use > 1 ? 'years' : 'year'}{' '}
             </p>
           </div>

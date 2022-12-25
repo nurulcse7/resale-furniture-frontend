@@ -1,71 +1,86 @@
-import React from 'react';
-import img from '../../../Pages/assets/contact/doodle.svg';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
+import useTitle from '../../../Hooks/useTitle';
+
 const ContactUs = () => {
+  useTitle('ContactUs');
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_36vclrk',
+        'template_uib0ack',
+        form.current,
+        'y3HJdYXyeuv1sR5i4'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success('Congrats! Successfully sent message');
+        },
+        (error) => {
+          toast.error(error.message);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
-    <div className='grid max-w-screen-xl grid-cols-1  gap-8 sm:px-8 px-3 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 '>
-      <div className='flex flex-col justify-between'>
-        <div className='space-y-2'>
-          <h2 className='text-4xl font-bold leading-tight lg:text-5xl'>
-            Let's talk!
-          </h2>
-          <div className='dark:text-gray-400'>
-            Vivamus in nisl metus? Phasellus.
-          </div>
-        </div>
-        <img src={img} alt='' className='p-6 h-52 md:h-64' />
-      </div>
-      <form className='space-y-6 ng-untouched ng-pristine ng-valid'>
-        <div>
-          <label htmlFor='name' className='text-sm text-gray-800 font-semibold'>
-            Full name
-          </label>
-          <input
-            id='name'
-            type='text'
-            placeholder='Your Name'
-            required
-            className='w-full input input-bordered  p-3 rounded '
-          />
-        </div>
-        <div>
-          <label
-            htmlFor='email'
-            className='text-sm text-gray-800 font-semibold'
-          >
-            Email
-          </label>
-          <input
-            id='email'
-            type='email'
-            required
-            placeholder='Your Email'
-            className='w-full input input-bordered  p-3 rounded '
-          />
-        </div>
-        <div>
-          <label
-            htmlFor='message'
-            className='text-sm text-gray-800 font-semibold'
-          >
-            Message
-          </label>
-          <textarea
-            id='message'
-            required
-            rows='3'
-            className='w-full textarea textarea-bordered p-3 rounded '
-            placeholder='Say somethings.....'
-            spellCheck='false'
-          ></textarea>
-        </div>
-        <button
+    <section className='hero my-12 shadow-2xl'>
+      <form ref={form} onSubmit={sendEmail} className='form-control p-12'>
+        <h4 className='text-center text-3xl text-secondary'>Contact Us</h4>
+        <h1 className='text-center text-white text-xl my-4'>
+          Have any queries? Send a message now.
+        </h1>
+        <label className='label text-lg mt-2'>Name</label>
+        <input
+          type='text'
+          name='user_name'
+          placeholder='Your Full Name'
+          className='input input-bordered input-accent w-full max-w-sm'
+          required
+        />
+        <label className='label text-lg mt-2'>Email</label>
+        <input
+          type='email'
+          name='user_email'
+          placeholder='Email Address'
+          className='input input-bordered input-accent w-full max-w-sm'
+          required
+        />
+        <label className='label text-lg mt-2'>Address</label>
+        <input
+          type='text'
+          name='user_address'
+          placeholder='Your address'
+          className='input input-bordered input-accent w-full max-w-sm my-2'
+        />
+        <label className='label text-lg mt-2'>Phone</label>
+        <input
+          type='text'
+          name='phone'
+          placeholder='Your phone number'
+          className='input input-bordered input-accent w-full max-w-sm my-2'
+          required
+        />
+        <label className='label text-lg'>Type message</label>
+        <textarea
+          name='message'
+          placeholder='Your message'
+          className='textarea textarea-accent'
+          required
+        ></textarea>
+        <input
           type='submit'
-          className='w-full input input-bordered  p-3 text-sm text-gray-800 font font-semibold tracking-wide uppercase rounded dark:bg-violet-400 dark:text-gray-900'
-        >
-          Send Message
-        </button>
+          value='Send Message'
+          className='btn bg-gradient-to-r from-accent to-secondary text-xl text-white capitalize mt-4'
+        />
       </form>
-    </div>
+    </section>
   );
 };
 
