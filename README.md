@@ -4,7 +4,7 @@
 
 `Live website` [Click here](https://resale-furniture-bd-com.web.app/)
 <!-- `client-side` [Click here](https://resale-furniture-bd-com.web.app/) -->
-<!-- `server-side` [Click here](https://resale-furniture-server-neon.vercel.app) -->
+<!-- `server-side` [Click here]() -->
 
 #### Code link 
 

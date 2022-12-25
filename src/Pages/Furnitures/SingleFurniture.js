@@ -3,18 +3,20 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 const SingleFurniture = () => {
-    const { capacity,
-        categoryId,
-        color,
-        location,
+    const { 
+        // capacity,
+        // categoryId,
+        // color,
+        // location,
         name,
-        originalPrice,
+        // originalPrice,
         picture,
-        reSalePrice,
-        role,
-        sellerName,
-        years_of_use,
-        _id } = useLoaderData()
+        // reSalePrice,
+        // role,
+        // sellerName,
+        // years_of_use,
+        // _id 
+    } = useLoaderData()
 
     return (
         <section className='my-8'>

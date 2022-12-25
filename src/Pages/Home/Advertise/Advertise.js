@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import SmallLoader from '../../Shared/Loader/SmallLoader';
-import { FaRegHeart } from 'react-icons/fa';
-import { GoReport, GoLocation } from 'react-icons/go';
+import {  GoLocation } from 'react-icons/go';
 import { FiClock } from 'react-icons/fi';
 import badge from '../../assets/icons/verified.png';
 const Advertise = ({ setSelectOrder }) => {
