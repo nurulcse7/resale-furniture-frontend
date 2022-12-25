@@ -17,7 +17,7 @@ const Banner = () => {
               <span className='lg:pl-2'>others brand. Your home in your Way.</span>
             </p>
             <div className='flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start'>
-              <Link to='/categories' className='px-8 py-3 text-lg font-semibold rounded dark:bg-yellow-100 dark:text-gray-900'>
+              <Link to='/categories' className='px-8  btn bg-gradient-to-r from-accent to-secondary text-xl text-white capitalize'>
                 Shopping Now
               </Link>
             </div>
@@ -26,7 +26,7 @@ const Banner = () => {
             <img
               src={banner}
               alt='BannerPhoto'
-              className='object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-xl'
+              className='object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-3xl'
             />
           </div>
         </div>

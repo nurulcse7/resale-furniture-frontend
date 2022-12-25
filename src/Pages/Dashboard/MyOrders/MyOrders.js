@@ -156,8 +156,8 @@ const MyOrders = () => {
           <h1 className='sm:text-4xl text-2xl lg:pt-12 text-center lg:text-left pt-10 lg:pl-8 font-semibold text-secondary'>
             Order were Not Found !
           </h1>
-          <Link className='underline' to='/'>
-            Get Products
+          <Link className='btn bg-gradient-to-r from-accent to-secondary text-xl text-white capitalize mt-6' to='/categories'>
+            Go Shopping
           </Link>
         </div>
       )}
