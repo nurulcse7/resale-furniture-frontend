@@ -20,6 +20,7 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handler);
     };
   }, []);
+  
   return (
     <div className='sticky top-0 z-50 bg-base-200'>
       <div>

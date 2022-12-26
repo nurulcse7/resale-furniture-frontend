@@ -13,11 +13,9 @@
 `server-side` [Click here](https://github.com/nurulcse7/resale-furniture-server)
 
 ### Description
-- In this project implement for Resale Furniture. 
-- Customer/user can't take a service without login and login form also validation implemented, such as  full 
-name is required, password must be 6 characters, need a uppercase (CAPITAL) and a special character (!@#$&*).
+In this project implement for Resale Furniture. Here buyers can purchase with various categories, Seller can sell and advertise their products. Admin can manage, user, buyer, seller, dashboard, and the whole website systems. Everyone can buy and pay with Stripe (payment gateway). Anyone can contact with admin by using the contact form.
+- The user can't take a buy without login and login form also validation is implemented, such as a full name is required, the password must be 6 characters, need the uppercase (CAPITAL) and a unique character (!@#$&*), etc.
 - Implement user email verification enable
-
 - This project frontend start with Create-react-app (ReactJS)
 - Design by Tailwindcss with daisyUI Component 
 - Backend start with NodeJS and ExpressJS
@@ -31,8 +29,11 @@ name is required, password must be 6 characters, need a uppercase (CAPITAL) and 
 - Custom Design 
 - SEO Friendly 
 - Mobile and PC, Tablet Responsive 
-- Doctors Management 
-- Customers Management 
+- Customers Management
+- Seller Management 
+- Admin Dashboard 
+- Product Management 
+- Product Advertise Section 
 - Add to Cart / Book Appointment 
 - Payment Gateway 
 - Email services 
@@ -78,7 +79,9 @@ name is required, password must be 6 characters, need a uppercase (CAPITAL) and 
 - Nodemailer (npm install nodemailer) [Docs](https://nodemailer.com/about/)
 - Mail gun () [Docs](https://app.mailgun.com/mg/dashboard) (https://www.npmjs.com/package/nodemailer-mailgun-transport) (npm i nodemailer-mailgun-transport)
 
-- Deploy in Vercel (server) [Docs](https://vercel.com/dashboard)
+#### Deploy (Hosting)
+- Deploy frontend in Firebase (Client) [Docs](https://console.firebase.google.com/)
+- Deploy backend in Vercel (server) [Docs](https://vercel.com/dashboard)
 
 
 
