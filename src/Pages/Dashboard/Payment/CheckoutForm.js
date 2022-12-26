@@ -95,7 +95,7 @@ const CheckoutForm = ({ order }) => {
               .then((res) => {
                 console.log(res);
                 if (res.data?.acknowledged) {
-                  setSuccess('Congrats! your payment completed');
+                  setSuccess('Congrats! your payment successful');
                   setTransactionId(paymentIntent.id);
                 }
               });
@@ -126,7 +126,7 @@ const CheckoutForm = ({ order }) => {
         />
         {/*  */}
         <button
-          className='btn btn-sm mt-4 btn-primary'
+          className='btn btn-sm my-8 btn-primary'
           type='submit'
           disabled={!stripe || !clientSecret || processing}
         >
@@ -136,10 +136,10 @@ const CheckoutForm = ({ order }) => {
       <p className='text-secondary'>{cardError}</p>
       {success && (
         <div>
-          <p className='text-green-500'>{success}</p>
-          <p>
+          <p className='text-secondary font-semibold text-xl my-2'>{success}</p>
+          <p className='text-blue-500 my-5'>
             Your transactionId:{' '}
-            <span className='font-bold'>{transactionId}</span>
+            <span className='font-semibold text-cyan-500'>{transactionId}</span>
           </p>
         </div>
       )}

@@ -19,7 +19,7 @@ const Payment = () => {
                 Please pay <strong>${price}</strong>
 
             </p>
-            <div className="w-96 my-12">
+            <div className="w-2/3 p-5 my-12 bg-base-200 rounded-3xl text-xl">
                 <Elements stripe={stripePromise}>
                     <CheckoutForm order={order} />
                 </Elements>

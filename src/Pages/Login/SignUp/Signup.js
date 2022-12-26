@@ -99,7 +99,7 @@ const SignUp = () => {
                 .then((res) => {
                   if (res.data.acknowledged) {
                     setSignUpUserEmail(user?.email);
-                    toast.success('Account Created Successful', {
+                    toast.success('SignUp successful', {
                       duration: 1500,
                     });
                   }
@@ -227,7 +227,7 @@ const SignUp = () => {
                           value:
                             /(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])/,
                           message:
-                            'password must have uppercase number & special character',
+                            'Password must have a lowercase, uppercase,  number & special char.',
                         },
                         minLength: {
                           value: 6,

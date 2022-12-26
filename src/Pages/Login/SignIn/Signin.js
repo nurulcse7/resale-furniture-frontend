@@ -9,12 +9,12 @@ import useToken from '../../../Hooks/useToken';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 const SignIn = () => {
+  useTitle('SignIn');
   // show password state
   const [show, setShow] = useState(false);
   const [showPassword, setShowPassword] = useState('password');
   const [loginUserEmail, setLoginUserEmail] = useState('');
   const [token] = useToken(loginUserEmail);
-
   const {
     register,
     formState: { errors },
@@ -22,10 +22,8 @@ const SignIn = () => {
   } = useForm();
   // error state
   const [firebaseError, setFirebaseError] = useState('');
-
   const { continueWithGoogle, setLoading, logInWithEmailAndPassword } =
     useContext(AuthContext);
-  useTitle('Sign in');
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
   const navigate = useNavigate();
